@@ -1,6 +1,10 @@
+import { useGetAllPokemonQuery } from "./slice/apiSlice";
+
 const Home = () => {
+  const { data } = useGetAllPokemonQuery();
+  console.log(data);
   return (
-    <div>Home</div>
+    <div>{JSON.stringify(data)}</div>
   )
 }
 
