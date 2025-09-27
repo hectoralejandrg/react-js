@@ -2,11 +2,11 @@ import type { FetchBaseQueryError } from '@reduxjs/toolkit/query';
 import mainApi from '../../api/mainApi';
 import { globalApi } from '../../store/globalApi';
 import type { Pokemon } from '../types/types';
-const apiPokemonTags = globalApi.enhanceEndpoints({
+const apiTags = globalApi.enhanceEndpoints({
   addTagTypes: [],
 });
 
-export const customerApiSlice = apiPokemonTags.injectEndpoints({
+export const apiSlice = apiTags.injectEndpoints({
   endpoints: (builder) => ({
     getAllPokemon: builder.query<
       Pokemon,
@@ -26,4 +26,4 @@ export const customerApiSlice = apiPokemonTags.injectEndpoints({
   }),
 });
 
-export const { useGetAllPokemonQuery } = customerApiSlice;
+export const { useGetAllPokemonQuery } = apiSlice;

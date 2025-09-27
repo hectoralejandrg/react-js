@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "@mui/material";
 
-type BaseColumn<T, K extends keyof T | "actions" = keyof T | "actions"> = {
+type BaseColumn<T, K extends keyof T | "actions"> = {
   title: string;
   align?: "left" | "center" | "right";
   key: K;
@@ -53,17 +53,17 @@ export const TableComponent = <T extends object>({
               key={index}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              {columns.map((col) => {
+              {columns.map((col, index) => {
                 if (col.type === "actions") {
                   return (
-                    <TableCell align={col.align} key={col.key.toString()}>
+                    <TableCell align={col.align} key={`${col.key.toString()}-${index}`}>
                       {col.render(row)}
                     </TableCell>
                   );
                 }
 
                 return (
-                  <TableCell align={col.align} key={col.key.toString()}>
+                  <TableCell align={col.align} key={`${col.key.toString()}-${index}`}>
                     {col.render(row[col.key], row)}
                   </TableCell>
                 );

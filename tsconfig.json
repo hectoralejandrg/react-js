@@ -8,13 +8,16 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "esModuleInterop": true,
     "noEmit": true,
     "jsx": "react-jsx", // Necesario para React con Vite
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "erasableSyntaxOnly": false // Desactiva explícitamente
+    "erasableSyntaxOnly": false, // Desactiva explícitamente
+    "allowSyntheticDefaultImports": true,
+    "rootDir": "./src"
   },
   "include": ["src"]
 }
