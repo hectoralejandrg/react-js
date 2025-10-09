@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { ThemeProvider } from "@mui/material/styles";
@@ -9,7 +9,7 @@ import store from "./store/store.ts";
 import { BrowserRouter } from "react-router";
 
 createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  <StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
@@ -18,5 +18,5 @@ createRoot(document.getElementById("root")!).render(
         </ThemeProvider>
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  </StrictMode>
 );

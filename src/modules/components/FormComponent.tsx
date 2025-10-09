@@ -9,7 +9,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 
-// Validation schema with Yup
 const validationSchema = Yup.object({
   name: Yup.string()
     .min(2, "Nombre muy corto")
@@ -25,8 +24,6 @@ const validationSchema = Yup.object({
     .email("Invalid email address")
     .required("Correo es requerido"),
 });
-
-// Interface for form values
 interface FormValues {
   name: string;
   gender: string;
@@ -44,9 +41,7 @@ const FormComponent = () => {
         email: "",
       },
       validationSchema: validationSchema,
-      onSubmit: (values) => {
-        console.log("Form Submitted", values);
-      },
+      onSubmit: () => { },
     });
 
   return (
