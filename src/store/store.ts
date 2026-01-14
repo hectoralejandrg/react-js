@@ -2,11 +2,13 @@ import { globalApi } from './globalApi';
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import counterReducer from '../modules/slice/counterSlice';
+import authReducer from '../modules/slice/authSlice';
 
 export const store = configureStore({
   reducer: {
     [globalApi.reducerPath]: globalApi.reducer,
-    counter: counterReducer
+    counter: counterReducer,
+    auth: authReducer
   },
     // Adding the api middleware enables caching, invalidation, polling,
   // and other useful features of `rtk-query`.
