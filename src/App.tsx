@@ -1,10 +1,16 @@
-import { useRoutes } from "react-router";
-import router from "./routes/router";
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
+import theme from "./theme.ts";
+import AppRouter from "./routes/AppRouter.tsx";
 
 function App() {
-  const content = useRoutes(router);
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppRouter />
+    </ThemeProvider>
 
-  return <>{content}</>;
+  );
 }
 
 export default App;
