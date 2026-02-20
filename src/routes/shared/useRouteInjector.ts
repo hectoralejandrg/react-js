@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import { RouteObject } from 'react-router-dom';
-import RouteRegistry from './RouteRegistry';
+import RouteRegistry from '../shared/RouteRegistry';
 
 interface UseRouteInjectorProps {
   privateRoutes?: RouteObject[];

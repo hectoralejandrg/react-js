@@ -1,13 +1,13 @@
-import { RouteObject } from 'react-router-dom';
-import { useRouteInjector } from '../../../routes/private/useRouteInjector';
+import { RouteObject } from "react-router-dom";
+import { useRouteInjector } from "@/routes/shared/useRouteInjector";
 
 export const useUsersRoutes = () => {
   const userRoutes: RouteObject[] = [
     {
-      path: '/users',
+      path: "/users",
       children: [
         {
-          path: '',
+          path: "",
           element: <>Usuario</>,
         },
       ],
@@ -16,7 +16,7 @@ export const useUsersRoutes = () => {
 
   useRouteInjector({
     privateRoutes: userRoutes,
-    moduleName: 'UsersModule',
+    moduleName: "UsersModule",
   });
 
   return userRoutes;

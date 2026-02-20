@@ -6,7 +6,7 @@ interface GuestGuardProps {
 }
 
 const GuestGuard = ({ children }: GuestGuardProps) => {
-  const isAuthenticated = true; // Tu lógica de autenticación
+  const isAuthenticated = false; // Tu lógica de autenticación
   
   if (isAuthenticated) {
     return <Navigate to="/dashboard" replace />;

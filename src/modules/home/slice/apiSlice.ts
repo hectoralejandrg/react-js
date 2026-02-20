@@ -1,7 +1,8 @@
 import type { FetchBaseQueryError } from '@reduxjs/toolkit/query';
-import mainApi from '../../api/mainApi';
-import { globalApi } from '../../store/globalApi';
 import type { Pokemon } from '../types/types';
+import mainApi from '@/api/mainApi';
+import { globalApi } from '@/store/globalApi';
+
 const apiTags = globalApi.enhanceEndpoints({
   addTagTypes: [],
 });

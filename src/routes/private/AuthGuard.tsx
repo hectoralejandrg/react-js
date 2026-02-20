@@ -6,7 +6,7 @@ interface AuthGuardProps {
 }
 
 const AuthGuard = ({ children }: AuthGuardProps) => {
-  const isAuthenticated = true; // Tu lógica de autenticación
+  const isAuthenticated = false; // Tu lógica de autenticación
   
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;

@@ -17,7 +17,11 @@
     "noFallthroughCasesInSwitch": true,
     "erasableSyntaxOnly": false, // Desactiva explícitamente
     "allowSyntheticDefaultImports": true,
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src"],
 }
